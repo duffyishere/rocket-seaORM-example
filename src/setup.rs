@@ -1,7 +1,6 @@
 use std::env;
 use sea_orm::*;
 
-
 pub async fn set_up_db() -> Result<DbConn, DbErr>{
     let db_url:String = env::var("DB_URL").expect("DB_URL must be set.");
     let db_name:String = env::var("DB_NAME").expect("DB_NAME must be set.");
